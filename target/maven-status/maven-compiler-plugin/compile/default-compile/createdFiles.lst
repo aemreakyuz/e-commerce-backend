@@ -1,2 +1,10 @@
+com/ecommerce/backend/config/SecurityConfig.class
+com/ecommerce/backend/service/CategoryService.class
+com/ecommerce/backend/service/ProductService.class
+com/ecommerce/backend/repository/ProductRepository.class
 com/ecommerce/backend/entity/Product.class
+com/ecommerce/backend/controller/ProductController.class
+com/ecommerce/backend/entity/Category.class
 com/ecommerce/backend/ECommerceBackendApplication.class
+com/ecommerce/backend/repository/CategoryRepository.class
+com/ecommerce/backend/controller/CategoryController.class

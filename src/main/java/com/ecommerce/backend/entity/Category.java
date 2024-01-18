@@ -1,6 +1,7 @@
 package com.ecommerce.backend.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,7 +19,7 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+    @Column(name= "id")
     private long id;
 
     @Column(name="code")
@@ -37,7 +38,7 @@ public class Category {
     private String gender;
 
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
-
+    @JsonIgnore
     private List<Product> products;
 
     //bidirectional
@@ -46,7 +47,7 @@ public class Category {
             products = new ArrayList<>();
         }
         products.add(product);
-
+        product.setCategory(this);
     }
 
 }

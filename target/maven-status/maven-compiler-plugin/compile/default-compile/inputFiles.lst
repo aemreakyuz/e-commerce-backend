@@ -1,2 +1,10 @@
+/Users/cs/git/Workintech/e-commerce-backend/src/main/java/com/ecommerce/backend/config/SecurityConfig.java
 /Users/cs/git/Workintech/e-commerce-backend/src/main/java/com/ecommerce/backend/entity/Product.java
+/Users/cs/git/Workintech/e-commerce-backend/src/main/java/com/ecommerce/backend/entity/Category.java
+/Users/cs/git/Workintech/e-commerce-backend/src/main/java/com/ecommerce/backend/service/CategoryService.java
+/Users/cs/git/Workintech/e-commerce-backend/src/main/java/com/ecommerce/backend/repository/ProductRepository.java
+/Users/cs/git/Workintech/e-commerce-backend/src/main/java/com/ecommerce/backend/service/ProductService.java
+/Users/cs/git/Workintech/e-commerce-backend/src/main/java/com/ecommerce/backend/controller/CategoryController.java
+/Users/cs/git/Workintech/e-commerce-backend/src/main/java/com/ecommerce/backend/repository/CategoryRepository.java
+/Users/cs/git/Workintech/e-commerce-backend/src/main/java/com/ecommerce/backend/controller/ProductController.java
 /Users/cs/git/Workintech/e-commerce-backend/src/main/java/com/ecommerce/backend/ECommerceBackendApplication.java

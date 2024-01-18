@@ -34,15 +34,17 @@ public class ProductController {
         savedProduct.setName(product.getName());
         savedProduct.setDescription(product.getDescription());
         savedProduct.setPrice(product.getPrice());
-        savedProduct.setStock(product.getStock());
         savedProduct.setRating(product.getRating());
         savedProduct.setSellCount(product.getSellCount());
+        savedProduct.setStock(product.getStock());
         savedProduct.setImages(product.getImages());
+
         Category category = categoryService.getCategoryById(product.getCategory().getId());
-        savedProduct.setCategory(category);
-        category.addProduct(savedProduct);
-        savedProduct = productService.saveProduct(savedProduct);
-        return savedProduct;
+
+        product.setCategory(category);
+        category.addProduct(product);
+
+        return (productService.saveProduct(product));
     }
 
 

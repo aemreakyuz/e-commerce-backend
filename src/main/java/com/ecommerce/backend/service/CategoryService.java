@@ -5,6 +5,8 @@ import com.ecommerce.backend.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Service
@@ -17,12 +19,16 @@ public class CategoryService {
         this.categoryRepository = categoryRepository;
     }
 
+    public List<Category> getAll(){
+        return categoryRepository.findAll();
+    }
+
     public Category getCategoryById(long id){
         Optional<Category> categoryOptional = categoryRepository.findById(id);
         if(categoryOptional.isPresent()){
             return categoryOptional.get();
         }
-        throw new IllegalArgumentException("Product with given id not found");
+        throw new NoSuchElementException("Category with given id not found");
     }
 
     public Category saveCategory(Category category){
@@ -32,6 +38,5 @@ public class CategoryService {
         }
         return categoryRepository.save(category);
     }
-
 
 }
