@@ -25,4 +25,13 @@ public class CategoryService {
         throw new IllegalArgumentException("Product with given id not found");
     }
 
+    public Category saveCategory(Category category){
+        Optional<Category> optionalCategory = categoryRepository.findById(category.getId());
+        if(optionalCategory.isPresent()){
+            throw new IllegalArgumentException("Category is already present");
+        }
+        return categoryRepository.save(category);
+    }
+
+
 }
