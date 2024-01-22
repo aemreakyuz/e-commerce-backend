@@ -38,14 +38,11 @@ public class ProductController {
         savedProduct.setSellCount(product.getSellCount());
         savedProduct.setStock(product.getStock());
         savedProduct.setImages(product.getImages());
-
         Category category = categoryService.getCategoryById(product.getCategory().getId());
-
         product.setCategory(category);
         category.addProduct(product);
 
         return (productService.saveProduct(product));
     }
-
 
 }
