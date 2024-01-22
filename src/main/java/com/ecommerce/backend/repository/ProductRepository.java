@@ -9,7 +9,6 @@ import java.util.Optional;
 
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
-
     @Query("SELECT p FROM Product p JOIN p.category c WHERE c.title = :categoryName")
     List<Product> productsByCategory(String categoryName);
 
