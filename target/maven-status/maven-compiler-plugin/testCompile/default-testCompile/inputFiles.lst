@@ -1,1 +1,6 @@
+/Users/cs/git/Workintech/e-commerce-backend/src/test/java/com/ecommerce/backend/controller/UserControllerTest.java
+/Users/cs/git/Workintech/e-commerce-backend/src/test/java/com/ecommerce/backend/repository/CategoryRepositoryTest.java
+/Users/cs/git/Workintech/e-commerce-backend/src/test/java/com/ecommerce/backend/repository/ProductRepositoryTest.java
 /Users/cs/git/Workintech/e-commerce-backend/src/test/java/com/ecommerce/backend/ECommerceBackendApplicationTests.java
+/Users/cs/git/Workintech/e-commerce-backend/src/test/java/com/ecommerce/backend/service/CategoryServiceTest.java
+/Users/cs/git/Workintech/e-commerce-backend/src/test/java/com/ecommerce/backend/service/ProductServiceTest.java

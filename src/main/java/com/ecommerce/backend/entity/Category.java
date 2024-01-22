@@ -42,12 +42,13 @@ public class Category {
     private List<Product> products;
 
     //bidirectional
-    public void addProduct(Product product){
-        if(products == null){
+    public void addProduct(Product product) {
+        if (products == null) {
             products = new ArrayList<>();
         }
         products.add(product);
-        product.setCategory(this);
+        if (product.getCategory() == null) {
+            product.setCategory(this);
+        }
     }
-
 }

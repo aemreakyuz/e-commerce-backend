@@ -1,6 +1,7 @@
 package com.ecommerce.backend.controller;
 
 
+import com.ecommerce.backend.dto.ProductRequest;
 import com.ecommerce.backend.entity.Category;
 import com.ecommerce.backend.entity.Product;
 import com.ecommerce.backend.service.CategoryService;
@@ -29,20 +30,21 @@ public class ProductController {
     }
 
     @PostMapping("/")
-    public Product saveProduct(@RequestBody Product product){
-        Product savedProduct = new Product();
-        savedProduct.setName(product.getName());
-        savedProduct.setDescription(product.getDescription());
-        savedProduct.setPrice(product.getPrice());
-        savedProduct.setRating(product.getRating());
-        savedProduct.setSellCount(product.getSellCount());
-        savedProduct.setStock(product.getStock());
-        savedProduct.setImages(product.getImages());
-        Category category = categoryService.getCategoryById(product.getCategory().getId());
+    public Product saveProduct(@RequestBody ProductRequest productRequest){
+
+        Product product = new Product();
+        product.setName(productRequest.name());
+        product.setDescription(productRequest.description());
+        product.setPrice(productRequest.price());
+        product.setRating(productRequest.rating());
+        product.setSellCount(productRequest.sellCount());
+        product.setStock(productRequest.stock());
+        product.setImages(productRequest.images());
+        Category category = categoryService.getCategoryById(productRequest.categoryId());
         product.setCategory(category);
         category.addProduct(product);
 
-        return (productService.saveProduct(product));
+        return productService.saveProduct(product);
     }
 
 }

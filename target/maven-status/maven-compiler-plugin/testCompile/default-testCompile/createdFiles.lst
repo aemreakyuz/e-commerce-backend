@@ -1,1 +1,6 @@
+com/ecommerce/backend/repository/CategoryRepositoryTest.class
+com/ecommerce/backend/service/CategoryServiceTest.class
+com/ecommerce/backend/controller/UserControllerTest.class
+com/ecommerce/backend/service/ProductServiceTest.class
 com/ecommerce/backend/ECommerceBackendApplicationTests.class
+com/ecommerce/backend/repository/ProductRepositoryTest.class
